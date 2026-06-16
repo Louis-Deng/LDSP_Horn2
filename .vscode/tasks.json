@@ -10,6 +10,7 @@
         ".",
         "-B",
         "Builds/CMake/Debug",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
         "-DCMAKE_BUILD_TYPE=Debug"
       ],
       "options": {
@@ -28,6 +29,7 @@
         ".",
         "-B",
         "Builds/CMake/Release",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
         "-DCMAKE_BUILD_TYPE=Release"
       ],
       "options": {
@@ -58,7 +60,7 @@
       ],
       "dependsOrder": "sequence",
       "group": "build",
-      "problemMatcher": "$gcc",
+      "problemMatcher": [],
       "detail": "Builds only the AU plugin with the Debug CMake configuration."
     },
     {
@@ -82,7 +84,7 @@
       ],
       "dependsOrder": "sequence",
       "group": "build",
-      "problemMatcher": "$gcc",
+      "problemMatcher": [],
       "detail": "Builds only the AU plugin with the Release CMake configuration."
     },
     {
@@ -106,7 +108,7 @@
       ],
       "dependsOrder": "sequence",
       "group": "build",
-      "problemMatcher": "$gcc",
+      "problemMatcher": [],
       "detail": "Builds only the VST3 plugin with the Debug CMake configuration."
     },
     {
@@ -130,7 +132,7 @@
       ],
       "dependsOrder": "sequence",
       "group": "build",
-      "problemMatcher": "$gcc",
+      "problemMatcher": [],
       "detail": "Builds only the VST3 plugin with the Release CMake configuration."
     },
     {
@@ -154,7 +156,7 @@
       ],
       "dependsOrder": "sequence",
       "group": "build",
-      "problemMatcher": "$gcc",
+      "problemMatcher": [],
       "detail": "Builds the standalone app with the Debug CMake configuration."
     },
     {
@@ -178,7 +180,7 @@
       ],
       "dependsOrder": "sequence",
       "group": "build",
-      "problemMatcher": "$gcc",
+      "problemMatcher": [],
       "detail": "Builds the standalone app with the Release CMake configuration."
     },
     {

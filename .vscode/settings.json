@@ -1,0 +1,12 @@
+{
+  "cmake.buildDirectory": "${workspaceFolder}/Builds/CMake/Debug",
+  "cmake.configureSettings": {
+    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+    "CMAKE_BUILD_TYPE": "Debug"
+  },
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/Builds/CMake/Debug/compile_commands.json",
+  "clangd.arguments": [
+    "--enable-config",
+    "--compile-commands-dir=${workspaceFolder}/Builds/CMake/Debug"
+  ]
+}

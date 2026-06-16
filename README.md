@@ -99,6 +99,21 @@ Output/Release/vst3/
 
 ## Cursor / VS Code
 
+Recommended extensions:
+
+- CMake Tools
+- clangd
+
+For reliable editor diagnostics, configure Debug first so CMake generates:
+
+```text
+Builds/CMake/Debug/compile_commands.json
+```
+
+clangd should use that compile database. JUCE module headers are not meant to be
+parsed as standalone files; if clangd reports errors inside JUCE such as
+`class JUCE_API`, restart the language server after configuring CMake.
+
 The repository includes tasks for:
 
 - `Standalone Debug`

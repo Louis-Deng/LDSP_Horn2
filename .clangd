@@ -1,0 +1,5 @@
+CompileFlags:
+  CompilationDatabase: Builds/CMake/Debug
+  Add:
+    - -include
+    - /Users/louisdeng/Documents/LDSP_Codes_Local/LDSP_Horn2/Builds/CMake/Debug/LDSP_Horn2_artefacts/JuceLibraryCode/JuceHeader.h

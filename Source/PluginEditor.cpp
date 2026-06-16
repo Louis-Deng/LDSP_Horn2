@@ -31,7 +31,7 @@ void LDSP_Horn2AudioProcessorEditor::paint (juce::Graphics& g)
     g.setColour (juce::Colours::black);
     g.setFont (juce::FontOptions (18.0f));
     // version string is OWNED in CMakeLists.txt (3)
-    g.drawFittedText ("TootYourOwnHorn v" JucePlugin_VersionString, getLocalBounds(), juce::Justification::centred, 1);
+    g.drawFittedText ("TootYourOwnHorn v" JucePlugin_VersionString, getLocalBounds(), juce::Justification::topLeft, 1);
 }
 
 void LDSP_Horn2AudioProcessorEditor::resized()
