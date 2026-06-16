@@ -7,6 +7,7 @@
 /JuceLibraryCode/
 
 # IDE and tool build state
+.vscode/settings.json
 DerivedData/
 CMakeFiles/
 CMakeCache.txt
