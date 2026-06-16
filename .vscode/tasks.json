@@ -1,0 +1,202 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CMake Configure Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "-S",
+        ".",
+        "-B",
+        "Builds/CMake/Debug",
+        "-DCMAKE_BUILD_TYPE=Debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Configures the Debug CMake build directory."
+    },
+    {
+      "label": "CMake Configure Release",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "-S",
+        ".",
+        "-B",
+        "Builds/CMake/Release",
+        "-DCMAKE_BUILD_TYPE=Release"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Configures the Release CMake build directory."
+    },
+    {
+      "label": "AU Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "Builds/CMake/Debug",
+        "--target",
+        "LDSP_Horn2_AU",
+        "--config",
+        "Debug",
+        "--parallel"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": [
+        "CMake Configure Debug"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "problemMatcher": "$gcc",
+      "detail": "Builds only the AU plugin with the Debug CMake configuration."
+    },
+    {
+      "label": "AU Release",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "Builds/CMake/Release",
+        "--target",
+        "LDSP_Horn2_AU",
+        "--config",
+        "Release",
+        "--parallel"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": [
+        "CMake Configure Release"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "problemMatcher": "$gcc",
+      "detail": "Builds only the AU plugin with the Release CMake configuration."
+    },
+    {
+      "label": "VST3 Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "Builds/CMake/Debug",
+        "--target",
+        "LDSP_Horn2_VST3",
+        "--config",
+        "Debug",
+        "--parallel"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": [
+        "CMake Configure Debug"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "problemMatcher": "$gcc",
+      "detail": "Builds only the VST3 plugin with the Debug CMake configuration."
+    },
+    {
+      "label": "VST3 Release",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "Builds/CMake/Release",
+        "--target",
+        "LDSP_Horn2_VST3",
+        "--config",
+        "Release",
+        "--parallel"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": [
+        "CMake Configure Release"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "problemMatcher": "$gcc",
+      "detail": "Builds only the VST3 plugin with the Release CMake configuration."
+    },
+    {
+      "label": "Standalone Debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "Builds/CMake/Debug",
+        "--target",
+        "LDSP_Horn2_Standalone",
+        "--config",
+        "Debug",
+        "--parallel"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": [
+        "CMake Configure Debug"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "problemMatcher": "$gcc",
+      "detail": "Builds the standalone app with the Debug CMake configuration."
+    },
+    {
+      "label": "Standalone Release",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "Builds/CMake/Release",
+        "--target",
+        "LDSP_Horn2_Standalone",
+        "--config",
+        "Release",
+        "--parallel"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": [
+        "CMake Configure Release"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "problemMatcher": "$gcc",
+      "detail": "Builds the standalone app with the Release CMake configuration."
+    },
+    {
+      "label": "AU Validation",
+      "type": "shell",
+      "command": "auval",
+      "args": [
+        "-v",
+        "augn",
+        "Hrn2",
+        "LDSP"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "test",
+      "problemMatcher": [],
+      "detail": "Validates the installed Audio Unit with auval."
+    }
+  ]
+}

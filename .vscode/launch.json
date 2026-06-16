@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Standalone Debug",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/Output/Debug/standalone/LDSP_Horn2.app/Contents/MacOS/LDSP_Horn2",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Standalone Debug"
+    }
+  ]
+}

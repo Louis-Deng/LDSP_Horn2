@@ -1,0 +1,22 @@
+.DS_Store
+
+# CMake/JUCE generated output
+/build/
+/Builds/
+/Output/
+/JuceLibraryCode/
+
+# IDE and tool build state
+DerivedData/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Common compiled/plugin artifacts
+*.a
+*.o
+*.dSYM/
+*.component/
+*.vst3/
+*.audioplugin/
+*.app/

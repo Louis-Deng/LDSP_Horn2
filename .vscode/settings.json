@@ -1,0 +1,11 @@
+{
+    "workbench.editor.enablePreview": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.quickSuggestions": {
+        "other": "off"
+    },
+    "editor.screenReaderAnnounceInlineSuggestion": false,
+    "editor.inlineSuggest.enabled": false
+}
